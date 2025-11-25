@@ -7,14 +7,10 @@ async function fetchWithFallback(container, url){
         const parser = new DOMParser()
 
         const doc = parser.parseFromString(res, "text/html")
-        console.log(doc.documentElement.innerHTML)
-        container.innerHTML = doc.documentElement.innerHTML
+        console.log(doc.getElementsByClassName("simple-little-table financials")[0])
+        container.innerHTML = doc.getElementsByClassName("simple-little-table financials")[0].outerHTML
     }
     catch (err){
         console.error(err)
     }
 }
-
-// Другие прокси:
-// 'https://api.codetabs.com/v1/proxy?quest='
-// 'https://corsproxy.io/?url'
