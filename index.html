@@ -7,7 +7,20 @@
     <body>
         <div id="base"></div>
         <script>
-            const progress = fetchWithFallback(document.getElementById("base"),'https://smart-lab.ru/q/LKOH/f/y')
+            const progress = fetchWithFallback(document.getElementById("base"))
+            /*
+            !async function () {
+                const response = await fetch("http://localhost:3000/files/LKOH.json")
+                const blob = await response.blob()
+
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.text = "asdasd"
+                a.download = 'LKOH.json';
+                document.body.appendChild(a);
+            }()
+            */
         </script>
     </body>
 </html>
